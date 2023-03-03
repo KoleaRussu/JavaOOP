@@ -1,8 +1,8 @@
 package string;
 
+import javax.sound.midi.SysexMessage;
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.util.HashSet;
 import java.util.Scanner;
 
 import  java.io.IOException;
@@ -18,12 +18,6 @@ public class StringUsage {
 
         convertUpperCase(phrase, file);
 
-        consonantsVowels(phrase);
-
-        duplicateWords(phrase);
-
-        maxLenght(phrase);
-        minLenghtt(phrase);
 
         int lenght = lineLength(phrase, file);
         System.out.println("Phrase Length: " + lenght);
@@ -36,6 +30,7 @@ public class StringUsage {
         int numberWords = consAndVowels(phrase, file);
         System.out.println("Number of Words: " + numberWords);
 
+//        int consonantsAndVowels =
     }
 
     private static StringBuilder readFile() throws IOException {
@@ -84,52 +79,5 @@ public class StringUsage {
 
     private  static int maximumLength(String phrase, FileWriter file) throws IOException {
         return 0;
-    }
-
-    private static void consonantsVowels(String phrase) throws IOException {
-        int vowels = 0, consonants = 0;
-
-        phrase = phrase.toLowerCase();
-
-        for(int i = 0; i < phrase.length(); i++) {
-            char ch = phrase.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                vowels++;
-            } else if (ch >= 'a' && ch <= 'z') {
-                consonants++;
-            }
-        }
-        System.out.println("Volwes: " + vowels);
-        System.out.println("Consonants: " + consonants);
-    }
-    private static void maxLenght(String phrase) throws IOException {
-
-        String[] words = phrase.split("\\s+");
-                String longestWord = "";
-        for(String word : words) {
-            if (word.length() > longestWord.length()) {
-                longestWord = word;
-            }
-        }
-        System.out.println("Maximum Length: " + longestWord);
-    }
-    private static void minLenghtt(String phrase) throws IOException {
-
-        String[] words = phrase.split("\\s+");
-        String shortestWord = words[0];
-        for(int i = 1; i < words.length; i++) {
-            if (words[i].length() < shortestWord.length()) {
-                shortestWord = words[i];
-            }
-        }
-        System.out.println("MixLength: " + shortestWord);
-    }
-    private static void duplicateWords(String phrase) throws IOException {
-        String[] words = phrase.split("\\s+");
-        Set<String> repeatWods = new  HashSet<>();
-        Set<String> uniqeWods = new  HashSet<>();
-        for(String word : words) {
-            if(words[])
-        }
     }
 }
