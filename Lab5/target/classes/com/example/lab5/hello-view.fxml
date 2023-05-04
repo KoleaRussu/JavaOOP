@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.TextField?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab5.HelloController">
+   <children>
+      <RadioButton fx:id="RadioC" layoutX="88.0" layoutY="104.0" mnemonicParsing="false" selected="true" text="C">
+         <toggleGroup>
+            <ToggleGroup fx:id="conversionType" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RadioF" layoutX="147.0" layoutY="104.0" mnemonicParsing="false" text="F" toggleGroup="$conversionType" />
+      <TextField fx:id="InputL" layoutX="40.0" layoutY="150.0" onKeyPressed="#OnKeyPressed" prefHeight="4.0" prefWidth="188.0" />
+      <Button fx:id="ButtonB" layoutX="95.0" layoutY="200.0" mnemonicParsing="false" onAction="#onButtonClik" prefHeight="25.0" prefWidth="79.0" text="Convert" />
+      <Separator layoutX="286.0" layoutY="4.0" orientation="VERTICAL" prefHeight="393.0" prefWidth="1.0" />
+      <Separator layoutX="6.0" layoutY="130.0" prefHeight="0.0" prefWidth="282.0" />
+      <Separator layoutX="6.0" layoutY="91.0" prefHeight="3.0" prefWidth="282.0" />
+      <Label layoutX="300.0" layoutY="54.0" prefHeight="37.0" prefWidth="60.0" text="Result:" textFill="#250303" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="ResultText" layoutX="300.0" layoutY="88.0" prefHeight="37.0" prefWidth="156.0" />
+   </children>
+</Pane>
