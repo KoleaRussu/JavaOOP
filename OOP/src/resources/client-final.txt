@@ -1,0 +1,5 @@
+Adam|Denis|31/10/2002|20
+Russu|Nikolai|10/11/2002|20
+Driga|Nikolai|13/01/2002|21
+Pogor|Cristian|16/08/2002|20
+Smoleac|Mihai|14/05/2002|20
